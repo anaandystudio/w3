@@ -65,12 +65,14 @@ body {
 @media (max-width: 600px) {
   .site-header {
     flex-direction: column;
-    align-items: flex-start;
+    align-items: flex-center;
     gap: 10px;
   }
 
   .nav-links {
-    align-self: flex-end; /* aligns nav-links block to the right */  }
+    align-self: flex-center; /* aligns nav-links block to the right */  
+   font-size: 12px;}
+
 }
 
 
@@ -85,6 +87,8 @@ body {
 .about {
   width: 50%;
   max-width: 700px;
+  min-width: 300px;
+
   height: auto;
   margin: 0 auto;
   padding: 20px;
