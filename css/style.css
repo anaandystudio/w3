@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 :root {
   --colour1: rgb(255, 44, 90);
   --colour2: #007BFF;
@@ -10,6 +10,12 @@
 
 
 }
+
+@font-face {
+  font-family:"Poppins";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+
 
 * {
   box-sizing: border-box;
