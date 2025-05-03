@@ -1,0 +1,215 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+:root {
+  --colour1: rgb(255, 44, 90);
+  --colour2: #007BFF;
+
+  --colour1_1: rgb(283, 97, 120);
+  --colour2_1: rgb(239, 237, 229);
+  --colour3_1: rgb(57 , 57, 57); 
+  --linestyle: 3px solid  var(--colour1_1);;
+
+
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  background-color: var(--colour2_1);
+  color: var(--colour3_1);
+}
+
+/* --- HEADER STYLES --- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  border-bottom: var(--linestyle);
+  margin-bottom: 20px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--colour3_1);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--colour1_1);
+}
+
+/* Responsive header on small screens */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+
+  .nav-links {
+    align-self: flex-end; /* aligns nav-links block to the right */  }
+}
+
+
+.container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.about {
+  width: 50%;
+  max-width: 700px;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+.about h1 {
+  text-align: center;
+}
+
+.about a {
+  text-decoration: none;
+  color: var(--colour3_1);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.about a:hover {
+  color: var(--colour1_1);
+}
+
+
+.text {
+  flex: 1;
+  text-align: center;
+}
+
+.image {
+  flex: 1;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Responsive behavior */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+  }
+
+  .text,
+  .image {
+    width: 100%;
+  }
+}
+
+/* --- GALLERY STYLES --- */
+.gallery-section {
+  margin-top: 40px;
+  padding: 0 20px;
+}
+
+.gallery-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* Responsive adjustment for smaller screens */
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr); /* 3 columns on desktop */
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .gallery {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery {
+    grid-template-columns: 1fr;
+  }
+}
+.gallery img {
+  width: 100%;
+  height: auto; /* ← This lets each image keep its natural aspect ratio */
+  display: block;
+  border-radius: 8px;
+  transition: transform 0.3s ease;
+  object-fit: cover; /* Optional: can be removed if you want natural crop */
+}
+
+.gallery img:hover {
+  transform: scale(1.03);
+}
+
+/* --- Masonry Layout using CSS columns --- */
+.masonry-gallery {
+  column-count: 3;
+  column-gap: 20px;
+  padding: 0 20px;
+}
+
+.masonry-gallery img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 20px;
+  border-radius: 8px;
+  break-inside: avoid;
+  transition: transform 0.3s ease;
+}
+
+@media (max-width: 900px) {
+  .masonry-gallery {
+    column-count: 2;
+  }
+}
+
+@media (max-width: 600px) {
+  .masonry-gallery {
+    column-count: 1;
+  }
+}
+
+
+/* --- Footer Styles --- */
+.site-footer {
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--colour3_1);
+  text-align: center;
+  border-top: var(--linestyle);
+}
+
+.footnote {
+  font-size: 12px;
+  color: var(--colour3_1);
+  margin-top: 10px;
+}
