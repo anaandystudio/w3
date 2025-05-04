@@ -2,7 +2,6 @@
 :root {
   --colour1: rgb(255, 44, 90);
   --colour2: #007BFF;
-
   --colour1_1: rgb(283, 97, 120);
   --colour2_1: rgb(239, 237, 229);
   --colour3_1: rgb(57 , 57, 57); 
@@ -65,13 +64,16 @@ body {
 @media (max-width: 600px) {
   .site-header {
     flex-direction: column;
-    align-items: flex-center;
+    align-items: enter;
     gap: 10px;
   }
 
   .nav-links {
-    align-self: flex-center; /* aligns nav-links block to the right */  
-   font-size: 12px;}
+    display: flex;
+    align-self: center;
+    font-size: 12px;
+    margin-bottom: 20px; /* adjust to your desired spacing */
+}
 
 }
 
@@ -142,6 +144,13 @@ body {
   padding: 0 20px;
 }
 
+@media (max-width: 600px) {
+  .gallery-section {
+  margin-top: 40px;
+  padding: 0 5px;
+  }
+}
+
 .gallery-section h2 {
   text-align: center;
   margin-bottom: 20px;
@@ -198,12 +207,16 @@ body {
 @media (max-width: 900px) {
   .masonry-gallery {
     column-count: 2;
+    padding: 0 0px;
+
   }
 }
 
 @media (max-width: 600px) {
   .masonry-gallery {
     column-count: 1;
+    padding: 0 0px;
+
   }
 }
 
