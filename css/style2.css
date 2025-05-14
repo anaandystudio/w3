@@ -1,0 +1,218 @@
+
+:root {
+  --colour1: rgb(255, 44, 90);
+  --colour2: #007BFF;
+  --colour1_1: rgb(283, 97, 120);
+  --colour2_1: rgb(239, 237, 229);
+  --colour3_1: rgb(57 , 57, 57); 
+  --linestyle: 3px solid  var(--colour1_1);;
+
+
+}
+
+@font-face {
+  font-family:"Poppins";
+  src: url("../fonts/Poppins-Regular.ttf") format("truetype");
+}
+
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  padding: 20px;
+  background-color: var(--colour2_1);
+  color: var(--colour3_1);
+}
+
+/* --- HEADER STYLES --- */
+.site-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 20px;
+  border-bottom: var(--linestyle);
+  margin-bottom: 20px;
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+}
+
+.nav-links {
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--colour3_1);
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: var(--colour1_1);
+}
+
+/* Responsive header on small screens */
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    align-items: enter;
+    gap: 10px;
+  }
+
+  .nav-links {
+    display: flex;
+    align-self: center;
+    font-size: 12px;
+    margin-bottom: 20px; /* adjust to your desired spacing */
+}
+
+}
+
+.about {
+  text-align: center;
+}
+
+.shop {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 20px;
+  justify-content: space-between;
+}
+
+.image_shop{
+  flex: 1;
+}
+.image_shop > img {
+  width: 10%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+  margin:auto;
+
+}
+
+.text-box {
+  width: 45%;
+  font-family: sans-serif;
+  line-height: 150%;
+  margin: 2% 0;
+
+}
+
+.text-box h2 {
+  margin-top: 0;
+}
+
+.text-box p {
+margin-bottom: 15px;;
+}
+
+/* TEST CAROUSEL + SLIDER */
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+  margin: auto;
+}
+
+.carousel {
+  overflow: hidden;
+  border-radius: 10px;
+  width: 100%;
+  height: auto;
+}
+
+.carousel-inner {
+  display: flex;
+  width: 100%; /* 3 slides = 300% */
+  height: 100%;
+  transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.slide img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+/* Hide radio buttons */
+input[name="slides"] {
+  display: none;
+}
+
+/* Controls carousel position */
+#slide1_1:checked ~ .carousel .carousel-inner {
+  transform: translateX(0%);
+}
+#slide1_2:checked ~ .carousel .carousel-inner {
+  transform: translateX(-100%);
+}
+#slide1_3:checked ~ .carousel .carousel-inner {
+  transform: translateX(-200%);
+}
+
+#slide2_1:checked ~ .carousel .carousel-inner {
+  transform: translateX(0%);
+}
+#slide2_2:checked ~ .carousel .carousel-inner {
+  transform: translateX(-100%);
+}
+
+
+/* Navigation dots */
+.nav {
+  text-align: center;
+  margin-top: 10px;
+}
+.nav label {
+  cursor: pointer;
+  padding: 5px;
+  margin: 0 3px;
+  background: #ccc;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Highlight current active dot */
+#slide1_1:checked ~ .nav label[for="slide1_1"],
+#slide1_2:checked ~ .nav label[for="slide1_2"],
+#slide1_3:checked ~ .nav label[for="slide1_3"], 
+#slide2_1:checked ~ .nav label[for="slide2_1"],
+#slide2_2:checked ~ .nav label[for="slide2_2"]{
+  background: var(--colour1_1);  /* your highlight color */
+}
+
+/* END CAROUSEL */
+
+
+
+/* --- Footer Styles --- */
+.site-footer {
+  margin-top: 60px;
+  padding: 20px;
+  font-size: 14px;
+  color: var(--colour3_1);
+  text-align: center;
+  border-top: var(--linestyle);
+}
+
+.footnote {
+  font-size: 12px;
+  color: var(--colour3_1);
+  margin-top: 10px;
+}
