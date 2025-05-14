@@ -87,7 +87,10 @@ body {
   align-items: center;
   gap: 20px;
   justify-content: space-between;
+  flex-wrap: nowrap;
 }
+
+
 
 .image_shop{
   flex: 1;
@@ -116,6 +119,8 @@ body {
 .text-box p {
 margin-bottom: 15px;;
 }
+
+
 
 /* TEST CAROUSEL + SLIDER */
 .carousel-wrapper {
@@ -199,7 +204,30 @@ input[name="slides"] {
 
 /* END CAROUSEL */
 
+/* Responsive: stack on smaller screens */
+@media (max-width: 768px) {
+  .shop {
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
 
+  .image_shop {
+    width: 80%;
+  }
+
+  .text-box{
+  max-width: 100%;
+  width: 85%;
+
+  text-align: center;
+  margin: 0 auto;        
+  }
+
+  .carousel {
+    width: 100%;
+    max-width: 100%;
+  }
+}
 
 /* --- Footer Styles --- */
 .site-footer {
