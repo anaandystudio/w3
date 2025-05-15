@@ -102,6 +102,7 @@ body {
 .about p{
 line-height: 200%;
 margin: 2% 0;
+text-align: center;
 }
 
 .about a {
@@ -296,6 +297,22 @@ button.next {
   right: 10px;
 }
 
+/* email button */
+.button {
+    border-radius: 2px;
+}
+
+.button a {
+    padding: 8px 12px;
+    border: 1px solid #ED2939;
+    border-radius: 2px;
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    color: var(--colour1_1); 
+    text-decoration: none;
+    font-weight: bold;
+    display: inline-block;  
+}
 
 /* --- Masonry Layout using CSS columns --- */
 .masonry-gallery {
