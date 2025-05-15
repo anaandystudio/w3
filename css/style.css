@@ -116,6 +116,46 @@ text-align: left;
   color: var(--colour1_1);
 }
 
+.contact {
+  width: 50%;
+  max-width: 700px;
+  min-width: 300px;
+
+  height: auto;
+  margin: 0 auto;
+  padding: 20px;
+}
+.contact h1 {
+  text-align: center;
+}
+
+.contact p{
+line-height: 200%;
+margin: 2% 0;
+text-align: center;
+}
+
+.contact p2{
+line-height: 200%;
+margin: 2% 0;
+text-align: center;
+font-weight: lighter;
+
+}
+
+
+.contact a {
+  text-decoration: none;
+  color: var(--colour3_1);
+  font-weight: bold;
+  transition: color 0.3s ease;
+  text-align: center;
+}
+
+.contact a:hover {
+  color: var(--colour1_1);
+}
+
 .text {
   flex: 1;
   text-align: center;
