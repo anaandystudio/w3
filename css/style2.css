@@ -157,9 +157,11 @@ margin-bottom: 15px;;
 }
 
 /* Hide radio buttons */
-input[name="slides"] {
+
+input[type="radio"] {
   display: none;
 }
+
 
 /* Controls carousel position */
 #slide1_1:checked ~ .carousel .carousel-inner {
