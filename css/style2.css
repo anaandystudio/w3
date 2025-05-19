@@ -178,6 +178,28 @@ input[name="slides"] {
 #slide2_2:checked ~ .carousel .carousel-inner {
   transform: translateX(-100%);
 }
+#slide2_3:checked ~ .carousel .carousel-inner {
+  transform: translateX(-200%);
+}
+#slide3_1:checked ~ .carousel .carousel-inner {
+  transform: translateX(0%);
+}
+#slide3_2:checked ~ .carousel .carousel-inner {
+  transform: translateX(-100%);
+}
+#slide3_3:checked ~ .carousel .carousel-inner {
+  transform: translateX(-200%);
+}
+#slide4_1:checked ~ .carousel .carousel-inner {
+  transform: translateX(0%);
+}
+#slide4_2:checked ~ .carousel .carousel-inner {
+  transform: translateX(-100%);
+}
+#slide4_3:checked ~ .carousel .carousel-inner {
+  transform: translateX(-200%);
+}
+
 
 
 /* Navigation dots */
@@ -199,7 +221,14 @@ input[name="slides"] {
 #slide1_2:checked ~ .nav label[for="slide1_2"],
 #slide1_3:checked ~ .nav label[for="slide1_3"], 
 #slide2_1:checked ~ .nav label[for="slide2_1"],
-#slide2_2:checked ~ .nav label[for="slide2_2"]{
+#slide2_2:checked ~ .nav label[for="slide2_2"],
+#slide2_3:checked ~ .nav label[for="slide2_3"], 
+#slide3_1:checked ~ .nav label[for="slide3_1"],
+#slide3_2:checked ~ .nav label[for="slide3_2"],
+#slide3_3:checked ~ .nav label[for="slide3_3"], 
+#slide4_1:checked ~ .nav label[for="slide4_1"],
+#slide4_2:checked ~ .nav label[for="slide4_2"],
+#slide4_3:checked ~ .nav label[for="slide4_3"] {
   background: var(--colour1_1);  /* your highlight color */
 }
 
