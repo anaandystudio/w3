@@ -182,7 +182,9 @@ margin-bottom: 15px;;
 /* Hide radio buttons */
 
 input[type="radio"] {
-  display: none;
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
 }
 
 
